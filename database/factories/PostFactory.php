@@ -20,9 +20,10 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
+            'user_id' => 1,
             'title' => $title = fake()->sentence(),
             'slug'  => Str::slug($title),
-            'body' => fake()->text(200),
+            'body' => fake()->text(2500),
         ];
     }
 }

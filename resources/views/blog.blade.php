@@ -4,10 +4,14 @@
     <h1>Listado</h1>
     @foreach($posts as $post)
         <p>
-            <strong>{{ $post['id'] }}</strong>
-            <a href="{{ route('post', $post['slug'] ) }} ">
-                {{ $post['title'] }}
+            <strong>{{ $post->id }}</strong>
+            <a href="{{ route('post', $post->slug ) }} ">
+                {{ $post->title }}
             </a>
+            <br>
+            <span> creado por {{ $post->user->name }} </span>
+
+
         </p>
 
         @endforeach
